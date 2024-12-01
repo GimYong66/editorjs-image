@@ -1,5 +1,5 @@
-import ajax from '@codexteam/ajax';
-import type { AjaxResponse } from '@codexteam/ajax';
+import ajax from 'editorjs-ajax';
+import type { AjaxResponse } from 'editorjs-ajax';
 import isPromise from './utils/isPromise';
 import type { UploadOptions } from './types/types';
 import type { UploadResponseFormat, ImageConfig } from './types/types';
