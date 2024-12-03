@@ -305,6 +305,9 @@ export default class Ui {
    * @param status - see {@link Ui.status} constants
    */
   private toggleStatus(status: UiState): void {
+    if (status == UiState.Filled && this.nodes.wrapper.classList.contains(`${this.CSS.wrapper}--${status}`)){
+      return;
+    }
     for (const statusType in UiState) {
       if (Object.prototype.hasOwnProperty.call(UiState, statusType)) {
         this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${UiState[statusType as keyof typeof UiState]}`, status === UiState[statusType as keyof typeof UiState]);
